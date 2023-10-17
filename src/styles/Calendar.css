@@ -1,0 +1,177 @@
+/*    CARGANDO        */
+.cargando-container {
+  margin-top: 10rem;
+  position: relative;
+}
+.cargando {
+  text-align: center;
+}
+.cargando-container .loader-container {
+  right: calc(50% - 14ch);
+  bottom: -0.5rem;
+}
+.cargando-container .loader-container span {
+  font-size: 3rem;
+}
+.cargando-serverError {
+  text-align: center;
+  color: darkred;
+}
+
+.calendar-header {
+  margin: 0 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-month {
+  min-width: 13ch;
+}
+.calendar-header-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+
+.calendar {
+  border-top: 1px solid #aaa;
+  padding: 0.5rem;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calendar-week-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+.total-week {
+  text-align: right;
+  margin: 0.25rem 0.5rem;
+  font-weight: bold;
+}
+
+.date-cell {
+  background: var(--cell);
+  margin: 0.075rem;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.date-cell.full {
+  grid-column: 1/-1;
+}
+
+/*                 HEADER                     */
+/*============================================*/
+.date-cell-header {
+  padding: 0.25rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date-cell-header-num {
+  text-align: center;
+  padding: 0.1rem 0.25rem;
+
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.date-cell-header-num.today {
+  background: var(--today);
+  border: 1px solid #666;
+}
+
+/*                 LIST                     */
+/*============================================*/
+.date-cell-lists {
+  min-height: 2rem;
+}
+
+.date-cell-list-obj,
+.date-cell-list-obj-number {
+  display: grid;
+  grid-template-columns: 6ch 1fr 2fr 6ch 8ch 0.35fr;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  font-weight: bold;
+}
+.date-cell-list-obj span {
+  text-align: center;
+}
+
+.date-cell-list-obj-number {
+  display: flex;
+  justify-content: center;
+}
+
+.date-cell-list-obj-number.turno,
+.date-cell-list-obj.turno {
+  background: var(--turno);
+}
+
+.date-cell-list-obj-number.depi,
+.date-cell-list-obj.depi {
+  background: var(--depi);
+}
+
+.date-cell-list-obj > * {
+  padding: 0 0.3rem;
+}
+.date-cell-list-obj-name {
+  border-left: 1px solid #999;
+}
+.date-cell-list-obj-treatment {
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
+.date-cell-list-obj-duration {
+  border-right: 1px solid #999;
+}
+.date-cell-list-obj-price {
+  border-right: 1px solid #999;
+}
+
+.date-cell-list-obj-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.delete-btn {
+  pointer-events: auto;
+}
+
+.delete-btn.noclick {
+  animation: flash 1s ease-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    color: transparent;
+  }
+  50% {
+    color: var(--black);
+  }
+}

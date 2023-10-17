@@ -1,0 +1,32 @@
+.header-container {
+  position: relative;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.header-nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-nav a {
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: 3px solid transparent;
+  padding: 0 0.5rem;
+}
+
+.header-nav a.active {
+  border-bottom: 3px solid var(--today);
+  transition: border 0.5s ease;
+}
+
+.logout-icon {
+  font-size: 1.5rem;
+}

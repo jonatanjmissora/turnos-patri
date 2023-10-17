@@ -1,0 +1,131 @@
+#form {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 1.25rem;
+  margin-top: 4rem;
+}
+.form-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.form-title-date-input {
+  font-size: 1rem;
+  background: var(--cell);
+  border: 1px solid #aaa;
+  width: 15ch;
+}
+
+.form-cancel-btn {
+  position: absolute;
+  right: 2rem;
+  top: -3rem;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: min(95%, 700px);
+  margin: 0 auto;
+}
+.form-row input,
+.form-row select {
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.15rem;
+  border: 1px solid #aaa;
+  background: var(--cell);
+  font-weight: bold;
+}
+.form-row input:focus {
+  outline: none;
+}
+.form-row select {
+  width: 100%;
+}
+.hora-form-input {
+  min-width: 10ch;
+}
+
+.select-container {
+  width: 100%;
+}
+
+.depi-option-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.depi-option {
+  border: 1px solid transparent;
+  color: #666;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.depi-option.active {
+  border: 1px solid #aaa;
+  background: var(--today);
+  color: var(--black);
+}
+
+.otro-input {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.form-row-duracion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.duracion-form-input {
+  width: 50%;
+}
+
+.valor-form-input {
+  width: 50%;
+}
+
+.last-row {
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.submit-error {
+  color: red;
+  font-size: 1.35rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-submit-btn {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 0.5rem auto;
+  background: var(--today);
+}
+
+.form-submit-btn .loader-container {
+  right: calc(50% - 11ch);
+  bottom: 0.25rem;
+}

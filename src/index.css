@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+:root {
+  font-size: calc(0.5vw + 1vh + 0.5vmin);
+  --body-bg: rgba(254, 242, 255, 0.432);
+  --cell: rgb(243, 226, 255);
+  --turno: rgba(241, 166, 174, 0.63);
+  --depi: rgba(125, 189, 198, 0.678);
+  --today: rgba(255, 210, 217, 0.904);
+  --white: #fff;
+  --black: #333;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+}
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--body-bg);
+  color: var(--black);
+}
+#root {
+  width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 4px;
+}
+code,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  //max-width: 100%;
+}
+a,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  line-height: 1.35;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+}
+a {
+  border: 0;
+  border-radius: 0;
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 0.5em 1em;
+  position: relative;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*        APP           */
+.App {
+  position: relative;
+}
+
+/*        LOADER        */
+.loader-container {
+  position: absolute;
+}
+.loader {
+  animation: flash 1s ease-out infinite alternate;
+  font-size: 1.5rem;
+}
+.loader.two {
+  margin-left: 0.5rem;
+  animation-delay: 0.33s;
+}
+.loader.three {
+  margin-left: 0.5rem;
+  animation-delay: 0.66s;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    color: transparent;
+  }
+  50% {
+    color: var(--black);
+  }
+}

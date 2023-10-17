@@ -1,0 +1,51 @@
+.clientas-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+.go-home {
+  height: 1.5rem;
+  width: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.clienta-nombre {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  background: var(--cell);
+  font-weight: bold;
+}
+.clienta-turnos {
+  margin-top: 0.5rem;
+}
+
+.clienta-turno {
+  display: grid;
+  grid-template-columns: 12ch 1fr 7ch;
+}
+.clienta-turno.turno {
+  background: var(--turno);
+}
+.clienta-turno.depi {
+  background: var(--depi);
+}
+
+
+.clienta-turno span {
+  text-align: center;
+}
+
+.clienta-turno ~ .clienta-turno {
+  border-top: 1px solid #aaa;
+}
+
+.total-clienta {
+  font-weight: bold;
+  text-align: right;
+  padding: 0.25rem 1rem;
+}
